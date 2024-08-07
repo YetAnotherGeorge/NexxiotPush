@@ -1,0 +1,11 @@
+{
+   "nexxiot": {
+      "db": {
+         "host": "HOST",
+         "port": 9906,
+         "user": "USR",
+         "password": "PASSWORD"
+      },
+      "api_key": "API_KEY"
+   }
+}

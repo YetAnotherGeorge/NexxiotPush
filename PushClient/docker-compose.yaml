@@ -1,0 +1,5 @@
+services:
+  nexxiot-push-node:
+    image: localhost/push-client:latest
+    container_name: nexxiot-push-node
+    restart: unless-stopped

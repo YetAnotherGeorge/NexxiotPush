@@ -1,0 +1,13 @@
+services:
+  nexxiot-push-db:
+    image: mysql/mysql-server
+    restart: unless-stopped
+    container_name: nexxiot-push-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+    ports:
+      - 9906:3306
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf:z
+      - ./scripts:/scripts:z
+      - ./backups:/backups:z
