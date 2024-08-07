@@ -2,4 +2,6 @@ services:
   nexxiot-push-node:
     image: localhost/push-client:latest
     container_name: nexxiot-push-node
+    volumes:
+      - ./config.json:/app/NexxiotPush/PushClient/config.json
     restart: unless-stopped
