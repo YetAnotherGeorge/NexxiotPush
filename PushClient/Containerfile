@@ -1,7 +1,9 @@
 FROM node:latest
 
+ARG VERSION
+
 RUN mkdir -p /app/PushClient
-ADD ./ /app/PushClient
+RUN git clone --branch ${VERSION} https://github.com/YetAnotherGeorge/NexxiotPush.git /app/PushClient
 WORKDIR /app/PushClient
 
 RUN npm install --global typescript
