@@ -2,9 +2,9 @@ FROM node:latest
 
 ARG VERSION
 
-RUN mkdir -p /app/PushClient
-RUN git clone --branch ${VERSION} https://github.com/YetAnotherGeorge/NexxiotPush.git /app/PushClient
-WORKDIR /app/PushClient
+RUN mkdir -p /app/NexxiotPush
+RUN git clone --branch ${VERSION} https://github.com/YetAnotherGeorge/NexxiotPush.git /app/NexxiotPush
+WORKDIR /app/NexxiotPush/PushClient
 
 RUN npm install --global typescript
 RUN npm install
